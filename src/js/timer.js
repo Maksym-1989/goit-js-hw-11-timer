@@ -34,7 +34,7 @@ class CountdownTimer {
       Math.floor((time % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
     );
     const mins = this.pad(Math.floor((time % (1000 * 60 * 60)) / (1000 * 60)));
-    const secs = this.pad(Math.floor((time % (1000 * 60 * 60)) / (1000 * 60)));
+    const secs = this.pad(Math.floor((time % (1000 * 60)) / 1000));
     this.textContentAdd(days, hours, mins, secs);
   }
 
@@ -48,7 +48,7 @@ class CountdownTimer {
 
 const timer = new CountdownTimer({
   selector: '#timer-1',
-  targetDate: new Date('May 20, 2021'),
+  targetDate: new Date('May 18, 2021'),
 });
 
 timer.start();
