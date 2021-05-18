@@ -17,12 +17,12 @@ class CountdownTimer {
   }
 
   start() {
-    const time = this.targetDate - new Date();
-    this.getTimeComponents(time);
+    this.getTimeComponents(this.targetDate - new Date());
     setInterval(() => {
-      this.getTimeComponents(time);
+      this.getTimeComponents(this.targetDate - new Date());
     }, 1000);
   }
+
   pad(value) {
     return String(value).padStart(2, '0');
   }
