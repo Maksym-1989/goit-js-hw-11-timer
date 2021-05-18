@@ -20,7 +20,6 @@ class CountdownTimer {
     const time = this.targetDate - new Date();
     this.getTimeComponents(time);
     setInterval(() => {
-      const time = this.targetDate - new Date();
       this.getTimeComponents(time);
     }, 1000);
   }
